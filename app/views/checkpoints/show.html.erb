@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @checkpoint.number %>
+</p>
+
+<p>
+  <strong>Activationcount:</strong>
+  <%= @checkpoint.activationCount %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @checkpoint.level %>
+</p>
+
+<%= link_to 'Edit', edit_level_checkpoint_path(@checkpoint.level,@checkpoint) %> |
+<%= link_to 'Back', level_checkpoints_path(@checkpoint.level) %>
