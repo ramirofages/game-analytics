@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Checkpoints</h1>
+<h1>level <%= @level.number %> checkpoints </h1>
 
 <table>
   <thead>
@@ -13,7 +13,7 @@
   </thead>
 
   <tbody>
-    <% @level.checkpoints.each do |checkpoint| %>
+    <% @level.checkpoints.sort { |x, y| x.number <=> y.number }.each do |checkpoint| %>
       <tr>
         <td><%= checkpoint.number %></td>
         <td><%= checkpoint.activationCount %></td>

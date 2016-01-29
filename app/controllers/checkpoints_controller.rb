@@ -6,6 +6,7 @@ class CheckpointsController < ApplicationController
   def index
     @level = Level.find(params[:level_id])
     
+    
   end
 
   # GET /checkpoints/1
